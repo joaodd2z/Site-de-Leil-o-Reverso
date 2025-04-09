@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cotaki - Seu Portal de Leilões Inteligentes</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Adicionar jQuery para melhor manipulação do DOM -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Adicionar FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <header class="header animate__animated animate__fadeIn">
+    <h1>Cotaki</h1>
+    <p>Seu Portal de Leilões Inteligentes</p>
+  </header>
+
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="#" class="logo">Cotaki</a>
+    </div>
+    <div class="nav-center">
+      <div class="search-bar">
+        <div class="category-select">
+          <label for="category-select" class="visually-hidden">Selecione uma categoria</label>
+          <select id="category-select" title="Selecione uma categoria">
+            <option>Todas as Categorias</option>
+            <option>Tecnologia</option>
+            <option>Veículos</option>
+            <option>Esportes</option>
+            <!-- ... outras categorias ... -->
+          </select>
+        </div>
+        <input type="text" placeholder="O que você procura?">
+        <button class="search-button" title="Pesquisar">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a href="#" class="nav-link"><i class="far fa-heart"></i> Salvos</a>
+      <a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> Carrinho</a>
+      <div class="user-menu">
+        <button class="user-button">
+          <i class="fas fa-user"></i>
+          <span>Minha Conta</span>
+        </button>
+        <!-- Menu dropdown aqui -->
+      </div>
+    </div>
+  </nav>
+
+  <nav class="category-nav">
+    <ul>
+      <li><a href="#" class="category-link">Mais Procurados</a></li>
+      <li><a href="#" class="category-link">Tecnologia</a></li>
+      <li><a href="#" class="category-link">Veículos</a></li>
+      <li><a href="#" class="category-link">Esportes</a></li>
+      <li><a href="#" class="category-link">Saúde e Beleza</a></li>
+      <li><a href="#" class="category-link">Equipamentos Industriais</a></li>
+      <li><a href="#" class="category-link">Ver Todas</a></li>
+    </ul>
+  </nav>
+
+  <main class="content">
+    <!-- Aba Início -->
+    <section id="inicio" class="tab-content active">
+      <div class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Transforme Suas Compras em Economia Real</h1>
+          <p class="hero-subtitle">Onde fornecedores competem e você economiza até 35%</p>
+          <div class="hero-cta-container">
+            <button class="hero-cta">
+              Comece sua Primeira Cotação Grátis
+            </button>
+            <span class="cta-highlight">
+              Mais de 5.000 negócios já fechados!
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-section">
+        <div class="search-container">
+          <div class="search-input-group">
+            <span class="search-icon">
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" class="search-input" placeholder="Pesquise o que quiser">
+          </div>
+          <button class="search-button">Pesquisar</button>
+        </div>
+        <div class="quick-categories">
+          <a href="#salvos" class="category-pill">
+            <i class="fas fa-bookmark"></i>
+            Salvos
+          </a>
+          <a href="#tecnologia" class="category-pill">
+            <i class="fas fa-microchip"></i>
+            Tecnologia
+          </a>
+          <a href="#veiculos" class="category-pill">
+            <i class="fas fa-car"></i>
+            Veículos
+          </a>
+          <a href="#esportes" class="category-pill">
+            <i class="fas fa-running"></i>
+            Esportes
+          </a>
+          <a href="#saude-beleza" class="category-pill">
+            <i class="fas fa-heartbeat"></i>
+            Saúde e Beleza
+          </a>
+          <a href="#equipamentos" class="category-pill">
+            <i class="fas fa-industry"></i>
+            Equipamentos Industriais
+          </a>
+          <a href="#todas-categorias" class="category-pill">
+            <i class="fas fa-th-large"></i>
+            Todas as Categorias
+          </a>
+        </div>
+      </div>
+
+      <!-- Nova seção de Cotações Ativas -->
+      <div class="active-quotations">
+        <h2 class="section-title">Encontre seus Futuros Clientes!</h2>
+        <div class="quotations-grid">
+          <!-- Cotação 1 -->
+          <div class="quotation-card">
+            <div class="quotation-header">
+              <img src="img/click-internet-logo.jpg" alt="Click Internet Logo" class="company-logo">
+              <div class="quotation-type">Compra</div>
+            </div>
+            <h3 class="quotation-title">30 Computadores de Escritório</h3>
+            <div class="quotation-details">
+              <p><strong>Comprador:</strong> Click Internet</p>
+              <p><strong>Fim da Cotação:</strong> 20/04/2025</p>
+              <p><strong>Último lance:</strong> R$ 200,00</p>
+            </div>
+            <button class="bid-button">Fazer Proposta</button>
+          </div>
+
+          <!-- Cotação 2 -->
+          <div class="quotation-card">
+            <div class="quotation-header">
+              <img src="img/studio-films-logo.jpg" alt="Studio Films Logo" class="company-logo">
+              <div class="quotation-type">Serviço</div>
+            </div>
+            <h3 class="quotation-title">Contratação Filmmaker</h3>
+            <div class="quotation-details">
+              <p><strong>Comprador:</strong> Studio Films</p>
+              <p><strong>Fim da Cotação:</strong> 15/04/2025</p>
+              <p><strong>Último lance:</strong> R$ 3.500,00</p>
+            </div>
+            <button class="bid-button">Fazer Proposta</button>
+          </div>
+
+          <!-- Cotação 3 -->
+          <div class="quotation-card">
+            <div class="quotation-header">
+              <img src="img/escola-progresso-logo.jpg" alt="Escola Progresso Logo" class="company-logo">
+              <div class="quotation-type">Compra</div>
+            </div>
+            <h3 class="quotation-title">30 Livros Didáticos</h3>
+            <div class="quotation-details">
+              <p><strong>Comprador:</strong> Escola Progresso</p>
+              <p><strong>Fim da Cotação:</strong> 25/04/2025</p>
+              <p><strong>Último lance:</strong> R$ 150,00</p>
+            </div>
+            <button class="bid-button">Fazer Proposta</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Economia Garantida</h3>
+          <p>Média de 35% de economia em cada transação</p>
+        </div>
+        <!-- Adicione mais cards de benefícios -->
+      </div>
+
+      <!-- Depoimentos apenas na aba início -->
+      <h2 class="section-title">O que dizem nossos clientes</h2>
+      <div class="testimonials-container">
+        <div class="testimonials-nav">
+          <button class="nav-button prev" title="Previous Testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nav-button next" title="Next Testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="testimonials-grid">
+          <!-- Primeiro depoimento -->
+          <div class="testimonial-card active">
+            <div class="testimonial-header">
+              <img src="img/patricia-santos.jpg" alt="Patrícia Santos" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Patrícia Santos</h4>
+                <span>Escola Futuro Brilhante</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"Com a economia de 38% em material escolar, conseguimos ampliar nosso programa de bolsas de estudo. O Cotaki fez a diferença!"</p>
+          </div>
+
+          <!-- Segundo depoimento -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="img/roberto-lima.jpg" alt="Roberto Lima" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Roberto Lima</h4>
+                <span>Construtora Horizonte</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"Economizamos 32% em materiais de construção. Isso nos permitiu oferecer preços mais competitivos aos nossos clientes."</p>
+          </div>
+
+          <!-- Terceiro depoimento -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="img/carlos-ferreira.jpg" alt="Carlos Ferreira" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Carlos Ferreira</h4>
+                <span>Hospital São Lucas</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"Reduzimos em 28% os custos com materiais hospitalares. Excelente plataforma!"</p>
+          </div>
+
+          <!-- Quarto depoimento -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="img/ana-beatriz.jpg" alt="Ana Beatriz" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Ana Beatriz</h4>
+                <span>Restaurante Sabor & Arte</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"Conseguimos reduzir 30% nos custos de insumos. Isso melhorou muito nossa margem!"</p>
+          </div>
+
+          <!-- Quinto depoimento -->
+          <div class="testimonial-card">
+            <div class="testimonial-header">
+              <img src="img/maria-silva.jpg" alt="Maria Silva" class="testimonial-avatar">
+              <div class="testimonial-info">
+                <h4>Maria Silva</h4>
+                <span>Escola de Idiomas TopSpeak</span>
+              </div>
+            </div>
+            <p class="testimonial-text">"O Cotaki nos ajudou a economizar 35% em material didático. Recomendo muito!"</p>
+          </div>
+        </div>
+
+        <!-- Indicadores de navegação -->
+        <div class="testimonials-navigation">
+          <div class="testimonials-dots"></div>
+        </div>
+      </div>
+
+      <!-- Seção de comentários -->
+      <div class="comment-section">
+        <form id="comment-form" class="comment-form">
+          <input type="text" 
+                 class="comment-input" 
+                 placeholder="Deixe seu comentário..."
+                 required>
+          <button type="submit" class="comment-submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="feedback-message" id="feedback-message">
+        SEU FEEDBACK É IMPORTANTE PARA NÓS!
+      </div>
+    </section>
+
+    <!-- Aba Como Funciona -->
+    <section id="como-funciona" class="tab-content">
+      <h2>Como Funciona o Leilão Reverso?</h2>
+      <div class="steps-container">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>Cadastre sua Demanda</h3>
+          <p>Descreva detalhadamente o produto ou serviço que você precisa</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>Receba Propostas</h3>
+          <p>Fornecedores qualificados competem oferecendo seus melhores preços</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>Escolha a Melhor Oferta</h3>
+          <p>Compare propostas e escolha a que melhor atende suas necessidades</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aba Leilões Ativos -->
+    <section id="leiloes" class="tab-content">
+      <h2>Leilões Ativos</h2>
+      <div class="auctions-grid">
+        <div class="auction-card">
+          <h3 class="auction-title">Leilão de Serviços de Entrega</h3>
+          <p class="auction-price">A partir de R$50</p>
+        </div>
+        <div class="auction-card">
+          <h3 class="auction-title">Leilão de Produtos Eletrônicos</h3>
+          <p class="auction-price">A partir de R$200</p>
+        </div>
+        <div class="auction-card">
+          <h3 class="auction-title">Leilão de Consultoria Empresarial</h3>
+          <p class="auction-price">A partir de R$500</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aba Categorias -->
+    <section id="categorias" class="tab-content">
+      <h2>Categorias Populares</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <i class="fas fa-laptop category-icon"></i>
+          <h3>Eletrônicos</h3>
+          <p>Computadores, smartphones, tablets e acessórios</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-tools category-icon"></i>
+          <h3>Serviços</h3>
+          <p>Manutenção, consultoria, desenvolvimento e suporte</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-car category-icon"></i>
+          <h3>Automóveis</h3>
+          <p>Veículos, peças e serviços automotivos</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-home category-icon"></i>
+          <h3>Imóveis</h3>
+          <p>Compra, venda e locação de imóveis</p>
+        </div>
+        <div class="category-card">
+          <i class="fas fa-chart-line category-icon"></i>
+          <h3>Consultoria</h3>
+          <p>Consultoria empresarial e financeira</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aba Sobre -->
+    <section id="sobre" class="tab-content">
+      <div class="about-section">
+        <div class="mission-card">
+          <h2>Nossa Missão</h2>
+          <p class="mission-text">
+            "Transformar a maneira como as pessoas e empresas compram, trazendo economia real e sustentável através da competição justa e transparente."
+          </p>
+        </div>
+        
+        <div class="why-section">
+          <h3>Por que Leilão Reverso?</h3>
+          <p class="why-text">
+            Enquanto muitos buscam ganhos rápidos em day trade e outras plataformas de risco, 
+            oferecemos uma solução que traz economia real e sustentável. Na Cotaki, você não 
+            aposta na sorte - você aproveita o poder da competição saudável entre fornecedores 
+            para conseguir o melhor preço do mercado.
+          </p>
+        </div>
+
+        <div class="statistics-grid">
+          <div class="statistic-card">
+            <div class="statistic-number">35%</div>
+            <p class="statistic-label">Economia Média</p>
+          </div>
+          <div class="statistic-card">
+            <div class="statistic-number">5mil+</div>
+            <p class="statistic-label">Negócios Fechados</p>
+          </div>
+          <div class="statistic-card">
+            <div class="statistic-number">98%</div>
+            <p class="statistic-label">Clientes Satisfeitos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aba Contato -->
+    <section id="contato" class="tab-content">
+      <h2>Contato</h2>
+      <form id="contact-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="footer-comment-section">
+    <div id="commentArea" class="footer-comment-area">
+      <!-- Se não estiver logado -->
+      <div class="footer-login-prompt">
+        <p>Cadastre-se e interaja! 
+          <a href="auth/cadastro.php">Criar conta</a> ou 
+          <a href="auth/login.php">Entrar</a>
+        </p>
+      </div>
+      
+      <!-- Se estiver logado -->
+      <input type="text" 
+             class="footer-comment-input" 
+             placeholder="Deixe seu comentário..."
+             required>
+      <button class="footer-comment-button">Enviar</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-copyright">
+        © Copyright 2025 Cotaki. Todos os direitos reservados.
+      </div>
+      <div class="footer-links">
+        <a href="/contato">Contato com usuário</a>
+        <span class="footer-separator">•</span>
+        <a href="/privacidade">Privacidade</a>
+        <span class="footer-separator">•</span>
+        <a href="/termos-pagamentos">Termos de uso de pagamentos</a>
+        <span class="footer-separator">•</span>
+        <a href="/cookies">Cookies</a>
+        <span class="footer-separator">•</span>
+        <a href="/adchoice">AdChoice</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
